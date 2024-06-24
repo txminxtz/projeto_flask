@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Gerador e Validador de CPF/CNPJ</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('gerar_cpf') }}">Gerar CPF</a></li>
+                <li><a href="{{ url_for('gerar_cnpj') }}">Gerar CNPJ</a></li>
+                <li><a href="{{ url_for('validar_cpf') }}">Validar CPF</a></li>
+                <li><a href="{{ url_for('validar_cnpj') }}">Validar CNPJ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+        <p>Desenvolvido por ...</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>

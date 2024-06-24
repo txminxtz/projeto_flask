@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Validar CPF
+{% endblock %}
+
+{% block content %}
+<h2>Validação de CPF</h2>
+<form method="post">
+    <label for="cpf">Digite o CPF:</label>
+    <input type="text" id="cpf" name="cpf" required>
+    <button type="submit">Validar</button>
+</form>
+{% if cpf %}
+<p>{{ mensagem }}</p>
+{% endif %}
+{% endblock %}
